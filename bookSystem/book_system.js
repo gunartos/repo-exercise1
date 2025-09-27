@@ -49,6 +49,11 @@ function clearInputs() {
 }
 
 function deleteBook(id) {
+    document.getElementById('bookName').value = '';
+    document.getElementById('authorName').value = '';
+    document.getElementById('bookDescription').value = '';
+    document.getElementById('pagesNumber').value = '';
+    books.slice(index, 1);
     books = book.filter(book => book.id !== id);
-    addBook();
+    showbooks();
 }
